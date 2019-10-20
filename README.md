@@ -9,9 +9,7 @@ I updated it to work with chokidar and to run the compiler/server in docker.
 
 You don't even need to install nodejs to get this baby going if you have docker.
 
-First, make a directory for everything to live in then go there with a terminal.
-
-Next, run this:
+Run this to make a directory for your project and get everything it needs.
 
 `docker run --rm -it -v "%CD%":/app node /bin/bash -c "cd /app && npx degit ScienceVikings/svelte-template my-svelte-project && cd my-svelte-project && npm install"`
 
