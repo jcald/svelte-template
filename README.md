@@ -7,4 +7,16 @@
 This is a fork of the project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 I updated it to work with chokidar and to run the compiler/server in docker.
 
-Gettergoin with a lil `docker-compose up`
+You don't even need to install nodejs to get this baby going if you have docker.
+
+First, make a directory for everything to live in then go there with a terminal.
+
+Next, run this:
+
+`docker run --rm -it -v "%CD%":/app node /bin/bash -c "cd /app && npx degit ScienceVikings/svelte-template my-svelte-project && cd my-svelte-project && npm install"`
+
+Note: If you're running in a Linux-y environment change the `%CD%` to `$PWD`
+
+Change directories into the `my-svelte-project` directory.
+
+Finally, gettergoin with a lil `docker-compose up`
