@@ -10,3 +10,21 @@ services:
     ports:
       - "5000:5000"
       - "35729:35729"
+    networks:
+      - svelte
+  e2e:
+    image: cypress/included:3.8.0
+    working_dir: "/app"
+    volumes:
+      - ".:/app"
+    networks:
+      - svelte
+  tests:
+    image: node
+    volumes:
+      - ".:/app"
+    working_dir: "/app"
+    command: "npx babel-node tests/unit/run.js"
+
+networks:
+  svelte:
