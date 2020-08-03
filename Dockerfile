@@ -1,4 +1,4 @@
 FROM node
 WORKDIR /app
 COPY . .
-ENTRYPOINT npm install && npm run dev
+ENTRYPOINT yarn && yarn run dev
